@@ -110,7 +110,7 @@ function drawKart(k){
 function makeKart(i){
  const start=(.985-i*.012+1)%1,offset=i===0?0:(i%2?22:-22);
  const p=pointAt(start,offset);
- return {x:p.x,y:p.y,angle:p.angle,speed:0,progress:start,prevIndex:Math.floor(start*N),lap:0,finished:false,color:i===0?palette[selectedColor]:palette[i],name:driverNames[i],skill:[1,.96,.91,.88,.84,.8,.76,.72][i],offset,style:i%3,rank:i+1,stuck:0};
+ return {x:p.x,y:p.y,angle:p.angle,speed:0,progress:start,prevIndex:Math.floor(start*N),lastIndex:Math.floor(start*N),lap:0,finished:false,color:i===0?palette[selectedColor]:palette[i],name:driverNames[i],skill:[1,.96,.91,.88,.84,.8,.76,.72][i],offset,style:i%3,rank:i+1,stuck:0};
 }
 function buildSelector(){
  const s=$('trackSelect');s.innerHTML='';
